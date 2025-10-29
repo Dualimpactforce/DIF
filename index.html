@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dual Impact Force</title>
+</head>
+<body>
+    <header class="header top">
+        <input type="checkbox" class="header__checkbox" id="open-menu">
+        <label for="open-menu" class="header__open-nav-button" role="button">☰</label>
+        <div class="header__logo-container">
+            <img class="header__logo" src="PREFERENTE BLANCO.png">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#inicio" onclick="document.getElementById('open-menu').checked=false">Inicio</a></li>
+                <li class="header__nav-item"><a href="#nosotros" onclick="document.getElementById('open-menu').checked=false">Nosotros</a></li>
+                <li class="header__nav-item"><a href="#clientes" onclick="document.getElementById('open-menu').checked=false">Clientes</a></li>
+                <li class="header__nav-item"><a href="#contacto" onclick="document.getElementById('open-menu').checked=false">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bg_img-principal">
+        <img class="img-principal" src="PREFERENTE BLANCO.png">
+    </div>
+    <main class="profile">
+        <section id="inicio" class="profile__wrapped reveal">
+            <div class="profile__img-container">
+                <img src="Coki1.jpg".jpg" class="img-2" alt="Foto de Perfil">
+            </div>
+            <div class="profile__data-container">
+                <h1>CONRADO DE CASTRO MESSERSCHMIDT</h1>
+                <h2><i>Técnico Universitario En Actividad Física</i></h2>
+                <h4><i>Estudiante de licenciatura en ciencias del entrenamiento</i></h4>
+            </div>
+        </section>
+        <section class="slider-section" id="nosotros">
+            <h2 class="slider-title">DUAL IMPACT FORCE</h2>
+            <div class="slider-container">
+                <button class="slide-btn prev"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg></button>
+                <div class="slider-track">
+                    <div class="slide-card">
+                        <h3>¿QUIÉNES<br> SOMOS?</h3>
+                        <p class="p-text-card"><b>La intersección entre tu ambición y la metodología científica.<br>No entrenamos: <i><u>transformamos</u></i>.</b></p>
+                    </div>
+                    <div class="slide-card">
+                        <h3>READAPTACIÓN<br> FÍSICA</h3>
+                        <p class="p-text-card"><b>Soluciones de movimiento seguras<br> y basadas en la evidencia para<br> <i><u>patologías</u></i> y <i><u>readaptación</u></i>.</b></p>
+                    </div>
+                    <div class="slide-card">
+                        <h3>RENDIMIENTO<br> FÍSICO</h3>
+                        <p class="p-text-card"><b>Planificación optimizada para<br><i><u>romper</u></i> <i><u>límites</u></i>, sin importar tu nivel actual.</b></p>
+                    </div>
+                    <div class="slide-card">
+                        <h3>ANÁLISIS DEL MOVIMIENTO</h3>
+                        <p class="p-text-card"><b>Detectamos desbalances biomecánicos<br> y los corregimos para<br><i><u>maximizar eficiencia</u></i>.</b></p>
+                    </div>
+                    <div class="slide-card">
+                        <h3>MONITOREO INTELIGENTE</h3>
+                        <p class="p-text-card"><b>Seguimiento constante con resultados <i><u>medibles</u></i>, <i><u>reales</u></i> y <i><u>progresivos</u></i>.</b></p>
+                    </div>
+                </div>
+                <button class="slide-btn next"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg></button>
+            </div>
+            <div class="progress-bar"></div>
+        </section>
+        <section id="mision-vision-valores" class="mvv-section">
+            <div class="mvv-bg"></div>
+            <div class="mvv-container">
+                <h2 class="mvv-title reveal">Misión, Visión y Valores</h2>
+                <div class="mvv-block reveal">
+                    <h3 class="mvv-subtitle">Nuestra Misión</h3>
+                    <p class="mvv-text">Ser el centro de entrenamiento integral que transforma la vida de las personas, ofreciendo programas personalizados y un acompañamiento experto que fusiona el bienestar físico, mental y emocional, promoviendo la adopción de un estilo de vida activo y saludable a largo plazo con datos cuantificables y cualitativos.</p>
+                </div>
+                <div class="mvv-block reveal">
+                    <h3 class="mvv-subtitle">Nuestra Visión</h3>
+                    <p class="mvv-text">Ser reconocidos como el centro de entrenamiento integral líder y referente en Córdoba, destacando por la excelencia en la calidad de nuestros servicios, la innovación tecnológica y metodológica, pero sobre todo por construir una comunidad fuerte, motivada e inclusiva que celebra el progreso individual y colectivo.</p>
+                </div>
+                <div class="mvv-block reveal">
+                    <h3 class="mvv-subtitle">Nuestros Valores</h3>
+                    <ul class="mvv-list">
+                        <li>Profesionalismo y experiencia</li>
+                        <li>Enfoque Integral</li>
+                        <li>Compromiso</li>
+                        <li>Superación y Perseverancia</li>
+                        <li>Familia e Inclusión</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="clientes" class="clientes-section">
+            <h2 class="clientes-title">TESTIMONIOS</h2>
+            <div class="clientes-slider">
+                <button class="cliente-btn prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="-120 -960 960 960" width="24px" fill="#e3e3e3">
+                        <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
+                    </svg>
+                </button>
+                <div class="clientes-track">
+                    <div class="cliente-card">
+                        <img src="wp_cuba.jpeg" class="img-grid">
+                        <p class="text_grid"><i>"Entrenamiento muy completo y específico. Evaluaciones con lujo de detalles. Se basan en ciencia del movimiento avanzada, garantizando eficacia y seguridad."</i></p>
+                    </div>
+                    <div class="cliente-card">
+                        <img src="mujer4.jpg" class="img-grid foto-2">
+                        <p class="text_grid"><i>"Programas individualizados con seguimiento constante. Ideal para todo tipo de persona. ¡Super recomendable!"</i></p>
+                    </div>
+                    <div class="cliente-card">
+                        <img src="mujer3.jpg" class="img-grid foto-3">
+                        <p class="text_grid"><i>"Planes que tienen en cuenta no solo los objetivos deportivos sino también los personales. ¡Muy buenos!"</i></p>
+                    </div>
+                    <div class="cliente-card">
+                        <img src="mujer1.jpg" class="img-grid">
+                        <p class="text_grid"><i>"Agradezco el estímulo y la dedicación del entrenamiento. Me devolvió la confianza para volver al camino saludable."</i></p>
+                    </div>
+                </div>
+                <button class="cliente-btn next">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                        <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="clientes-progress"></div>
+        </section>
+
+    </main>
+    <footer id="contacto" class="footer">
+        <div class="footer__container">
+            <div class="footer__links">
+            <!-- MAIL -->
+            <a href="mailto:conradodecastro015@gmail.com" id="mailLink" class="footer__link" title="Enviar correo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer__icon">
+                <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18a2 2 0 0 0 2 2h16a2 
+                2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 4-8 5-8-5V6l8 5 8-5z"/>
+                </svg>
+                <span class="mail-short">Email</span>
+                <span class="mail-full">conradodecastro015@gmail.com</span>
+            </a>
+            <!-- INSTAGRAM -->
+            <a href="https://www.instagram.com/conramesserschmidt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" id="igLink" target="_blank" class="footer__link" title="Visitar Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="footer__icon">
+                <path fill="currentColor" d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 
+                5-2.24 5-5V7c0-2.76-2.24-5-5-5H7m10 2c1.66 0 3 1.34 3 
+                3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 
+                1.34-3 3-3h10m-5 3a5 5 0 1 0 0 10 5 5 0 0 0 
+                0-10m0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6m4.75-1.5a.75.75 
+                0 1 0 0 1.5.75.75 0 0 0 0-1.5"/>
+                </svg>
+                <span>Instagram</span>
+            </a>
+            <!-- WHATSAPP -->
+            <a href="https://wa.me/5493515607921?text=Hola!%20Me%20gustaría%20saber%20más%20sobre%20tus%20servicios." 
+                id="wppLink" target="_blank" class="footer__link" title="Enviar mensaje por WhatsApp">
+                <img class="img__wp" src="wpp1.png">
+                <span>WhatsApp</span>
+            </a>
+            </div>
+            <p class="footer__text">© 2025 DUAL IMPACT FORCE — Todos los derechos reservados</p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
