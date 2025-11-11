@@ -113,89 +113,46 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ==== SLIDER (SECCIÓN CLIENTES / TESTIMONIOS) ====
+
+
+
+
+
+
+// === SLIDER CLIENTES (simple y robusto) ===
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".clientes-slider");
-  if (!container) return console.error("CLIENTES SLIDER: .clientes-slider no encontrada");
+  if (!container) return;
 
   const track = container.querySelector(".clientes-track");
   const slides = Array.from(container.querySelectorAll(".cliente-card"));
   const prevBtn = container.querySelector(".prev");
   const nextBtn = container.querySelector(".next");
-  const progressBar = container.querySelector(".clientes-progress");
-
-  if (!track || slides.length === 0) return console.error("CLIENTES SLIDER: track o slides no encontrados");
-  if (!prevBtn || !nextBtn) console.warn("CLIENTES SLIDER: faltan botones prev/next");
 
   let current = 0;
   let slideWidth = container.clientWidth;
 
-  // Inicializar tamaños y barra
   function initSizes() {
     slideWidth = container.clientWidth;
     track.style.width = `${slides.length * slideWidth}px`;
-    track.style.display = "flex";
-    track.style.transition = "transform 0.6s ease";
 
     slides.forEach(slide => {
       slide.style.flex = `0 0 ${slideWidth}px`;
       slide.style.maxWidth = `${slideWidth}px`;
-      slide.style.boxSizing = "border-box";
     });
-
-    if (progressBar) {
-      progressBar.innerHTML = "";
-      slides.forEach((_, i) => {
-        const dot = document.createElement("span");
-        dot.className = "progress-dot" + (i === 0 ? " active" : "");
-        progressBar.appendChild(dot);
-      });
-    }
 
     goTo(current, false);
   }
 
-  // Movimiento del slider
   function goTo(index, animate = true) {
     current = ((index % slides.length) + slides.length) % slides.length;
     const px = -current * slideWidth;
     track.style.transition = animate ? "transform 0.6s ease" : "none";
     track.style.transform = `translateX(${px}px)`;
-
-    if (progressBar) {
-      const dots = progressBar.querySelectorAll(".progress-dot");
-      dots.forEach((d, i) => d.classList.toggle("active", i === current));
-    }
   }
 
-  // Botones
-  if (nextBtn) nextBtn.addEventListener("click", () => goTo(current + 1));
-  if (prevBtn) prevBtn.addEventListener("click", () => goTo(current - 1));
-
-  // Swipe táctil
-  let startX = 0;
-  let isSwiping = false;
-
-  container.addEventListener("touchstart", e => {
-    if (e.touches && e.touches[0]) {
-      startX = e.touches[0].clientX;
-      isSwiping = true;
-      track.style.transition = "none";
-    }
-  }, { passive: true });
-
-  container.addEventListener("touchend", e => {
-    if (!isSwiping) return;
-    const endX = e.changedTouches[0].clientX;
-    const dx = endX - startX;
-    const threshold = Math.min(window.innerWidth * 0.12, 60);
-
-    if (dx < -threshold) goTo(current + 1);
-    else if (dx > threshold) goTo(current - 1);
-    else goTo(current);
-
-    isSwiping = false;
-  }, { passive: true });
+  nextBtn.addEventListener("click", () => goTo(current + 1));
+  prevBtn.addEventListener("click", () => goTo(current - 1));
 
   window.addEventListener("resize", () => {
     const prevIndex = current;
@@ -204,5 +161,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   initSizes();
-  window.__clientesSlider = { goTo, initSizes, slides, track, container };
 });
+
