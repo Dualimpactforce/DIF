@@ -621,7 +621,7 @@ h4 {
   justify-content: center;
   align-items: center;
   padding: clamp(1rem, 5vw, 2rem); /* Escala con pantalla */
-  background-image: url(1.png);
+  background-image: url(1edit.png);
   background-size: cover;
   background-position: center;
   min-height: 100vh; /* ¡NO height: 100vh! → evita scroll */
@@ -748,6 +748,7 @@ h4 {
 
 
 
+
 /* - - - FOOTER - - - */
 
 
@@ -847,3 +848,4 @@ h4 {
         display: block;
     }
 }
+
