@@ -321,7 +321,7 @@ section {
     display: block;
     object-fit: cover;
     object-position: center top;
-  transform: scale(1.5) translateX(0.9rem) translateY(-1.25rem); 
+  transform: scale(1.05) translateX(0rem) translateY(0rem); 
 }
 
 .profile__data-container {
@@ -832,3 +832,4 @@ h4 {
         display: block;
     }
 }
+
